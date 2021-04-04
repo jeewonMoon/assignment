@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Instagram</title>
+    <style>
+        #whole {
+            height: 100%;
+            margin-top: 60px;
+        }
+        body {
+            display: block;
+        }
+        .sectionclass {
+            flex-direction: column;
+            min-height: 100%;
+            position: relative;
+            display: flex;
+            flex-grow: 1;
+        }
+        .mainclass {
+            display: flex;
+            position: relative;
+        }
+        .articleclass {
+            margin: 32px auto 0;
+            max-width: 935px;
+            padding-bottom: 32px;
+            width: 100%;
+            justify-content: center;
+            align-items: stretch;
+            border: 0 solid #000;
+            display: flex;
+        }
+        .imgclass {
+            align-self: center;
+            background-image: url(https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png);
+            background-size: 454px 618px;
+            flex-basis: 454px;
+            height: 618px;
+            margin-left: -35px;
+            margin-right: -15px;
+            background-repeat: no-repeat;
+        }
+        div {
+            align-items: stretch;
+            box-sizing: border-box;
+            position: relative;
+            border: 0 solid #000;
+        }
+        .imgdiv {
+            margin: 99px 0 0 151px;
+            position: relative;
+        }
+        .img {
+            height: 427px;
+            width: 240px;
+        }
+        .logindiv {
+            -webkit-box-flex: 1;
+            -webkit-box-pack: center;
+            margin-top: 40px;
+            max-width: 350px;
+
+        }
+        .loginboxdiv {
+            -webkit-box-align: center;
+            align-items: center;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            margin: 0 0 10px;
+            padding: 10px 0;
+        }
+        .instagramlogo {
+            margin: 22px auto 12px;
+            background-position: 0 -130px;
+            background-repeat: no-repeat;
+            height: 51px;
+            width: 175px;
+            display: block;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            line-height: 1;
+            background-image: url(https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png);
+        }
+        .inputdiv {
+            margin-bottom: 10px;
+            max-width: 350px;
+            width: 100%;
+        }
+        .formclass {
+            display: flex;
+            flex-direction: column;
+        }
+        .formdiv {
+            margin-top: 24px;
+        }
+        .idpwdiv {
+            margin: 0 40px 6px;
+            display: flex;
+            border: none;
+        }
+        .idpwinput {
+            -webkit-box-align: center;
+            align-items: center;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            box-sizing: border-box;
+            display: flex;
+            font-size: 14px;
+            width: 100%;
+        }
+        .labelclass {
+            display: flex;
+            height: 36px;
+            flex: 1 0 0;
+        }
+        .idpwfont {
+            font-size: 12px;
+            color: #8e8e8e;
+            flex: 1 0 auto;
+            overflow: hidden;
+            padding: 9px 0px 7px 8px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 18px;
+            border: 0;
+            cursor: text;
+        }
+        .blankclass {
+            height: 100%;
+            border: none;
+        }
+        .loginclass {
+            margin-top: 8px;
+            margin-right: 40px;
+            margin-left: 40px;
+            margin-bottom: 8px;
+        }
+        .loginbuttondiv {
+            background-color: rgb(154, 215, 255);
+            border: 1px solid transparent;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-weight: 600;
+            padding: 5px 111px;
+            text-align: center;
+            width: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .loginclick {
+            cursor: pointer;
+            text-align: center;
+        }
+        .orline {
+            margin: 10px 40px 18px;
+        }
+        .leftright {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            color: #8e8e8e;
+            font-size: 13px;
+            margin: 8px 0;
+            line-height: 20px;
+        }
+        .leftright::before,
+        .leftright::after {
+            content: "";
+            flex-grow: 1;
+            margin: 0 18px;
+            height: 1px;
+            font-size: 0;
+            line-height: 15px;
+            background-color: #8e8e8e;
+        }
+        
+        .facebookbutton {
+            border: 0;
+            color: #0095f6;
+            display: inline;
+            padding-left: 50px;
+            appearance: none;
+            background: 0 0;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+            width: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0;
+        }
+        .facebooklogo {
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+            top: 3px;
+            background-repeat: no-repeat;
+            background-position: -414px -259px;
+            height: 16px;
+            width: 16px;
+            background-image: url(https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png);
+            text-align: center;
+        }
+        .facebookcolor {
+            color: #385185;
+            text-align: center;
+        }
+        .findpw {
+            font-size: 12px;
+            line-height: 14px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        .joindiv {
+            align-items: center;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            margin: 0 0 10px;
+            padding: 10px 0;
+        }
+        .joinletter {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            margin: -3px 0 -4px;
+        }
+        .noaccount {
+            font-size: 14px;
+            margin: 15px;
+            text-align: center;
+        }
+        .join {
+            display: inline;
+            margin: 0;
+            color: #0095f6;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .downloaddiv {
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+        }
+        .downloadtxt {
+            font-size: 14px;
+            line-height: 18px;
+            margin: 20px 20px 20px 20px;
+            text-align: center;
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .downloadimg {
+            margin: 10px 0 10px 0;
+            justify-content: center;
+            display: flex;
+        }
+        .imgmargin {
+            margin-right: 8px;
+        }
+        .footerclass {
+            padding-left: 16px;
+            padding-right: 16px;
+            padding: 0 20px;
+            margin-top: 50px;
+        }
+        .footerdiv {
+            margin-bottom: 52px;
+        }
+        .footermargintop {
+            margin-top: 24px;
+        }
+        .footerlinediv {           
+            justify-content: center;
+            display: flex;
+        }
+        .footerelement {
+            margin-right: 8px;
+            margin-left: 8px;
+            margin-bottom: 12px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .footerword {
+            display: block;
+            color: #8e8e8e;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            margin: -2px 0 -3px;
+        }
+        .footerbottom {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            justify-content: center;
+            display: flex;
+        }
+        .korclass {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            margin: -2px 0 -3px;
+        }
+        .kordiv {
+            font-weight: 400;
+            color: #8e8e8e;
+            cursor: pointer;
+        }
+        .korstyle {
+            display: flex;
+        }
+        .vicon {
+            margin-left: 4px;
+        }
+        .cor {
+            margin-left: 16px;
+        }
+        .corstyle {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            margin: -2px 0 -3px;
+            color: #8e8e8e;
+        }
+    </style>
+</head>
+<body>
+    <div id="whole">
+        <section class="sectionclass">
+            <main class="mainclass" role="main">
+                <article class="articleclass">
+                    <div class="imgclass">
+                        <div class="imgdiv">
+                            <img class="img" src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg">
+                        </div>
+                    </div>
+                    <div class="logindiv">
+                        <div class="loginboxdiv">
+                            <h1 class="instagramlogo"></h1>
+                            <div class="inputdiv">
+                                <form class="formclass" id="loginForm" method="POST">
+                                    <div class="formdiv">
+                                        <div class="idpwdiv">
+                                            <div class="idpwinput">
+                                                <label class="labelclass">
+                                                    <input maxlength="75" name="username" type="text" class="idpwfont" placeholder="전화번호, 사용자 이름 또는 이메일">
+                                                </label>
+                                                <div class="blankclass"></div>
+                                            </div>
+                                        </div>
+                                        <div class="idpwdiv">
+                                            <div class="idpwinput">
+                                                <label class="labelclass">
+                                                    <input maxlength="75" name="password" type="password" class="idpwfont" placeholder="비밀번호">
+                                                </label>
+                                                <div class="blankclass"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="loginclass">
+                                            <button class="loginbuttondiv" disabled type="submit">
+                                                <div class="loginclick">로그인</div>
+                                            </button>
+                                        </div>
+                                        <div class="orline">
+                                            <div class="leftright">또는</div>
+                                            
+                                        </div>
+                                        <div class="loginclass">
+                                            <button class="facebookbutton" type="button">
+                                                <span class="facebooklogo"></span>
+                                                <span class="facebookcolor">Facebook으로 로그인</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a class="findpw" href="https://www.instagram.com/accounts/password/reset/" tapindex="0" style="color: #00376b;">비밀번호를 잊으셨나요?</a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="joindiv">
+                            <div class="joinletter">
+                                <p class="noaccount">계정이 없으신가요? 
+                                    <a href="https://www.instagram.com/accounts/emailsignup/" tabindex="0">
+                                        <span class="join">가입하기</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="downloaddiv">
+                            <p class="downloadtxt">앱을 다운로드하세요.</p>
+                            <div class="downloadimg">
+                                <a class="imgmargin" href="https://apps.apple.com/app/instagram/id389801252?vt=lo">
+                                    <img height="40px" src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png">
+                                </a>
+                                <a class="imgmargin" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D8B6F433E-47E0-46FC-9BDD-B2BF2714E7E9%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                                    <img height="40px" src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+            <footer class="footerclass" role="contentinfo">
+                <div class="footerdiv">
+                    <div class="footermargintop">
+                        <div class="footerlinediv">
+                            <div class="footerelement">
+                                <a href="https://about.instagram.com/" target="_blank">
+                                    <div class="footerword">소개</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://about.instagram.com/blog" target="_blank">
+                                    <div class="footerword">블로그</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://about.instagram.com/about-us/careers" target="_blank">
+                                    <div class="footerword">채용 정보</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://help.instagram.com/" target="_blank">
+                                    <div class="footerword">도움말</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/developer/" target="_blank">
+                                    <div class="footerword">API</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://help.instagram.com/519522125107875" target="_blank">
+                                    <div class="footerword">개인정보처리방침</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://help.instagram.com/581066165581870" target="_blank">
+                                    <div class="footerword">약관</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/directory/profiles/" target="_blank">
+                                    <div class="footerword">인기 계정</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/directory/hashtags/" target="_blank">
+                                    <div class="footerword">해시태그</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/explore/locations/" target="_blank">
+                                    <div class="footerword">위치</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footerlinediv">
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/beauty/" target="_blank">
+                                    <div class="footerword">뷰티</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/dance-and-performance/" target="_blank">
+                                    <div class="footerword">댄스 및 공연</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/fitness/" target="_blank">
+                                    <div class="footerword">피트니스</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/food-and-drink/" target="_blank">
+                                    <div class="footerword">식음료</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/home-and-garden/" target="_blank">
+                                    <div class="footerword">집 및 정원</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/music/" target="_blank">
+                                    <div class="footerword">음악</div>
+                                </a>
+                            </div>
+                            <div class="footerelement">
+                                <a href="https://www.instagram.com/topics/visual-arts/" target="_blank">
+                                    <div class="footerword">시각 예술</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerbottom">
+                        <div class="korclass">
+                            <span class="kordiv">
+                                <div class="korstyle">
+                                    <span>한국어</span>
+                                    <div class="vicon">
+                                        <span style="display: inline-block;transform: rotate(180deg);">
+                                            <i class="fas fa-chevron-down fa-rotate-180"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="cor">
+                            <div class="corstyle">© 2021 Instagram from Facebook</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+</body>
+</html>
